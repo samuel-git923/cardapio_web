@@ -11,13 +11,13 @@ const addressWarn = document.getElementById("address-warn");
 
 let cart = [];
 
-// abrir o modal
+
 cartBtn.addEventListener("click", function() {
     updateCartModal()
     cartModal.style.display = "flex";
 })
 
-// fechar o modal
+
 cartModal.addEventListener("click", function(event){
     if(event.target === cartModal){
         cartModal.style.display = "none";
@@ -39,7 +39,7 @@ menu.addEventListener("click", function(event){
     }
 })
 
-//function p/ add no carrinho
+
 function addToCart(name, price){
     const existingItem = cart.find(item => item.name === name)
 
@@ -158,7 +158,7 @@ checkoutBtn.addEventListener("click", function(){
         return;
     }
 
-    // enviar o pedido par api whats
+
     const cartItems = cart.map((item) => {
         return(
             ` ${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price} | `
